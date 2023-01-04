@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.welcome {
+  position: relative;
+  padding: 3rem;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 10%;
+  z-index: 111;
+  transform: translateX(-100%);
+  transition: all 250ms ease;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: stretch;
+  background: rgb(32, 184, 255);
+}
+
+nav li {
+  border-bottom: 1px solid;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  padding: calc(100vh / 8) 0;
+  line-height: 0;
+  display: inline-block;
+  width: 100%;
+}
+
+nav li:hover {
+  background: rgb(12, 154, 249);
+}
+
+.nav-open {
+  transform: translateX(0);
+}
+
+.container-all {
+  transform: translateX(90%);
+  transition: all 250ms ease;
+}
+
+.close-icon {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(23, 162, 23, 0.889);
+}
+
+.subscribe-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button {
+  text-transform: uppercase;
+  width: 200px;
+  text-align: center;
+  background-color: white;
+  color: #c4302b;
+  padding: 1rem;
+  font-size: 25px;
+  border-radius: 15px;
+  scale: 1;
+  animation: buttonAnimation 1s forwards;
+  animation-delay: 1s;
+}
+
+.button::before {
+  content: "subscribe";
+  display: block;
+  animation: buttonTextAnimation 1s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes buttonAnimation {
+  from {
+    scale: 0.9;
+  }
+  to {
+    scale: 1;
+    background-color: #c4302b;
+    color: white;
+  }
+}
+
+@keyframes buttonTextAnimation {
+  to {
+    content: "subscribed";
+  }
+}
+
+.bell {
+  background-color: white;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  scale: 1;
+  animation: bellAnimation 1s forwards;
+  animation-delay: 3s;
+}
+
+@keyframes bellAnimation {
+  from {
+    scale: 0.95;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+.bell svg {
+  opacity: 0.5;
+  rotate: 0;
+  transform-origin: top;
+  animation: bellIconAnimation 0.2s forwards;
+  animation-delay: 3s;
+}
+
+@keyframes bellIconAnimation {
+  0% {
+    rotate: 25deg;
+    scale: 1;
+    opacity: 0.5;
+  }
+
+  50% {
+    rotate: 0;
+    scale: 0.95;
+    opacity: 0.5;
+  }
+
+  75% {
+    rotate: -25deg;
+    scale: 1;
+    opacity: 0.5;
+  }
+
+  90%,
+  100% {
+    opacity: 1;
+    color: #c4302b;
+  }
+}
+
+.cursor {
+  opacity: 0;
+  position: absolute;
+  align-self: flex-end;
+  z-index: 999;
+  transition: 50px 50px;
+  rotate: 15deg;
+  animation: cursorAnimation 4s forwards;
+}
+
+@keyframes cursorAnimation {
+  20%,
+  50% {
+    opacity: 1;
+    translate: 50px 15px;
+  }
+
+  70%,
+  95% {
+    opacity: 1;
+    translate: 130px 15px;
+  }
+  100% {
+    opacity: 0;
+    translate: 180px 50px;
+  }
+}
+
+.cursor svg {
+  fill: white;
+}
